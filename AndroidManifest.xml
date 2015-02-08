@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.greet"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:name="com.example.kyle.proxyApp.Proxy"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="APPLICATION_CLASS_NAME"
+            android:value="com.example.greet.MyApplication" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="YnOVCzk23a1oExkRlLaEX9lu" />
+
+        <activity
+            android:name="com.example.greet.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.greet.NextActivity" >
+        </activity>
+
+        <service android:name="com.example.greet.LogService" >
+        </service>
+        <service android:name="com.example.greet.StartLogcatService" >
+        </service>
+
+    </application>
+
+</manifest>
